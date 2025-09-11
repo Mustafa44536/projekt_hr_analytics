@@ -1,0 +1,10 @@
+-- skapa användare för dlt (byt lösenord innan du kör!)
+CREATE USER IF NOT EXISTS DLT_USER
+  PASSWORD = 'PLACEHOLDER_PASSWORD'
+  DEFAULT_ROLE = ETL_DLT_ROLE
+  DEFAULT_WAREHOUSE = HR_ANALYTICS_WH
+  MUST_CHANGE_PASSWORD = FALSE;
+
+-- koppla rollen till användaren
+GRANT ROLE ETL_DLT_ROLE TO USER DLT_USER;
+
