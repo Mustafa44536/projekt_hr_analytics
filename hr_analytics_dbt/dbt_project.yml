@@ -6,7 +6,7 @@ name: 'hr_analytics_dbt'
 version: '1.0.0'
 
 # This setting configures which "profile" dbt uses for this project.
-profile: 'hr_analytics_dbt'
+profile: hr_analytics_dbt
 
 # These configurations specify where dbt should look for different types of files.
 # The `model-paths` config, for example, states that models in this project can be
