@@ -1,0 +1,8 @@
+version: 2
+
+sources:
+  - name: staging
+    database: HR_ANALYTICS    
+    schema: STAGING           
+    tables:
+      - name: job_ads
