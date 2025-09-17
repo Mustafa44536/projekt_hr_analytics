@@ -6,4 +6,4 @@ select
     relevance,
     application_deadline
 from stg_job_ads
-order by application_deadline
+order by application_deadline 
