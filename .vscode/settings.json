@@ -1,3 +1,7 @@
 {
-    "python-envs.pythonProjects": []
+    "python-envs.pythonProjects": [],
+
+    "files.associations": {
+    "*.sql": "jinja-sql"
+    }
 }

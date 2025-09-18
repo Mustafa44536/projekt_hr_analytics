@@ -71,4 +71,4 @@ if __name__ == "__main__":
     working_directory = Path(__file__).parent
     os.chdir(working_directory)
 
-    run_pipeline(table_name="technical_field_job_ads")
+    run_pipeline(table_name="admin_healthcare_sales_job_ads")
