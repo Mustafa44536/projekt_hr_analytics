@@ -21,6 +21,12 @@ select
     j.scope_of_work_max,
     e.employer_name,
     e.workplace_city,
+    e.employer_workplace,
+    e.workplace_street_address,
+    e.workplace_region,
+    e.workplace_postcode,
+    e.employer_organization_number,
+    e.workplace_country,
     a.experience_required,
     a.driver_license,
     a.access_to_own_car
