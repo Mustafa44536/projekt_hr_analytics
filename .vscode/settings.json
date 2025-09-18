@@ -3,5 +3,10 @@
 
     "files.associations": {
     "*.sql": "jinja-sql"
-    }
+    },
+    "dbt.perspectiveTheme": "Vintage",
+    "python.formatting.provider": "black",
+    "[python]": {
+        "editor.defaultFormatter": "ms-python.black-formatter"
+    },
 }
