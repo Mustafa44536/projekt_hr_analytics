@@ -1,4 +1,4 @@
-with stg_job_ads as (select * from {{ source ('job_ads', 'stg_ads') }})
+{#with stg_job_ads as (select * from {{ source ('job_ads', 'stg_ads') }})
 
 select
     occupation__label,
@@ -6,4 +6,16 @@ select
     relevance,
     application_deadline
 from stg_job_ads
-order by application_deadline 
+order by application_deadline#}
+
+with stg_job_ads as (
+    select * from {{ source('job_ads', 'stg_ads') }}
+)
+
+select
+    id as job_id,
+    headline,
+    number_of_vacancies as vacancies,
+    relevance,
+    application_deadline
+from stg_job_ads

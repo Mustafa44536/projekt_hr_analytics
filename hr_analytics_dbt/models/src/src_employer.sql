@@ -1,6 +1,7 @@
 with stg_job_ads as (select * from {{ source ('job_ads', 'stg_ads') }})
 
 select
+    id as job_id,
     employer__name as employer_name,
     employer__workplace as employer_workplace,
     employer__organization_number as employer_organization_number,

@@ -3,14 +3,14 @@ with src_employer as (
 )
 
 select
-    {{ dbt_utils.generate_surrogate_key(['employer_workplace', 'workplace_city']) }} as employer_id,
+    {{ dbt_utils.generate_surrogate_key(['job_id']) }} as employer_id,
+    job_id,
+    employer_name,
     employer_workplace,
-    max(employer_name) as employer_name,
-    max(employer_organization_number) as employer_organization_number,
-    max(workplace_street_address) as workplace_street_address,
-    max(workplace_region) as workplace_region,
-    max(workplace_postcode) as workplace_postcode,
-    max(workplace_city) as workplace_city,
-    max(workplace_country) as workplace_country
+    employer_organization_number,
+    workplace_street_address,
+    workplace_region,
+    workplace_postcode,
+    workplace_city,
+    workplace_country
 from src_employer
-group by employer_workplace, workplace_city
