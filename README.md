@@ -87,3 +87,4 @@ Detta projekt är en del av en akademisk inlämning och är endast avsett för u
 Obs: Projektet använder riktig data från Arbetsförmedlingens Jobtech API. Se till att följa deras användarvillkor och dataskyddspolicyer.
  
 ---
+ 
