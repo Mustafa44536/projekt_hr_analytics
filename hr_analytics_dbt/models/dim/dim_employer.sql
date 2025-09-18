@@ -8,9 +8,9 @@ select
     employer_name,
     employer_workplace,
     employer_organization_number,
-    workplace_street_address,
+    coalesce(workplace_street_address, 'Okänd') as workplace_street_address,
     workplace_region,
     workplace_postcode,
-    workplace_city,
+    coalesce(workplace_city, 'Okänd') as workplace_city,
     workplace_country
 from src_employer
