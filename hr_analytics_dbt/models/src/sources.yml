@@ -3,4 +3,4 @@ sources:
     schema: staging              
     tables:
       - name: stg_ads
-        identifier: technical_field_job_ads
+        identifier: admin_healthcare_sales_job_ads

@@ -3,14 +3,14 @@ with src_job_details as (
 )
 
 select
-    {{ dbt_utils.generate_surrogate_key(['headline']) }} as job_details_id,
+    {{ dbt_utils.generate_surrogate_key(['job_id']) }} as job_details_id,
+    job_id,
     headline,
-    max(description) as description, 
-    max(description_html_formatted) as description_html_formatted,
-    max(employment_type) as employment_type,
-    max(duration) as duration,
-    max(salary_type) as salary_type,
-    max(scope_of_work_min) as scope_of_work_min,
-    max(scope_of_work_max) as scope_of_work_max
+    description,
+    description_html_formatted,
+    employment_type,
+    duration,
+    salary_type,
+    scope_of_work_min,
+    scope_of_work_max
 from src_job_details
-group by headline
