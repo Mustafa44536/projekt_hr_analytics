@@ -7,15 +7,16 @@ st.set_page_config(page_title="Jobbannonser Dashboard", layout="wide")
  
 SF = st.secrets["snowflake"]
  
-@st.cache_resource(show_spinner=False)
+@st.cache_resource
 def get_conn():
     return snowflake.connector.connect(
-        user=SF["user"],
-        password=SF["password"],
-        account=SF["account"],
-        warehouse=SF["warehouse"],
-        database=SF["database"],
-        schema=SF["schema"],
+        account="FMVXUQS-IF87024",   
+        user="DBT_USER",             
+        password="RANDOM_PASSWORD",   
+        role="TRANSFORM_DBT_ROLE",   
+        warehouse="HR_ANALYTICS_WH",
+        database="HR_ANALYTICS",
+        schema="MART",              
     )
  
 @st.cache_data(show_spinner=True, ttl=300)
